@@ -1,0 +1,11 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadAtlasSnapshot",
+      "Effect": "Allow",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::REPLACE_WITH_BUCKET_NAME/snapshots/v01/project_atlas_chunks_bge_m3.jsonl"
+    }
+  ]
+}

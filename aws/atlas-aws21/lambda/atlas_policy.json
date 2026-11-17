@@ -1,0 +1,45 @@
+{
+  "routing": {
+    "dense_top_k": 5,
+    "rerank_candidate_k": 20
+  },
+  "hybrid": {
+    "dense_candidate_k": 20,
+    "lexical_candidate_k": 20,
+    "fusion_candidate_k": 20,
+    "final_top_k": 5,
+    "rrf_k": 60,
+    "dense_weight": 1.0,
+    "lexical_weight": 1.0
+  },
+  "reranking": {
+    "default_year": 2026,
+    "rank_step": 0.025,
+    "minimum_base_score": 0.4,
+    "identifier_document_bonus": 0.45,
+    "section_intent_bonus": 0.28,
+    "max_section_bonus": 0.56,
+    "current_status_bonus": 0.08,
+    "superseded_penalty": 0.3,
+    "final_approved_bonus": 0.1,
+    "exact_date_bonus": 0.3,
+    "future_date_penalty": 0.35,
+    "near_past_bonus": 0.08
+  },
+  "multi_identifier_coverage": {
+    "enabled": true,
+    "minimum_identifier_count": 2,
+    "minimum_direct_hits_per_identifier": 1,
+    "max_direct_candidates_per_identifier": 8
+  },
+  "lexical": {
+    "k1": 1.5,
+    "b": 0.75,
+    "field_weights": {
+      "document_id": 4,
+      "title": 2,
+      "section": 2,
+      "text": 1
+    }
+  }
+}

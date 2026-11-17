@@ -1,0 +1,12 @@
+project:
+  name: project_atlas
+  dataset_version: v0.1-full
+
+embedding:
+  model: BAAI/bge-m3
+  dimension: 1024
+  normalize_embeddings: true
+
+generation:
+  model: qwen3:8b
+  temperature: 0.0

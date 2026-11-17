@@ -1,0 +1,1712 @@
+{
+  "schema_version": 1,
+  "project": "Project Atlas 2-1",
+  "dataset": {
+    "version": "v0.1-full",
+    "frozen_questions": 50,
+    "snapshot_chunks": 128,
+    "top_k": 5
+  },
+  "run": {
+    "aws_generation_evaluated_at_utc": "2026-11-17T11:41:27.302594+00:00",
+    "databricks_generation_reference_at_utc": "2026-10-15T04:41:48.233826+00:00",
+    "embedding_model": "BAAI/bge-m3",
+    "generation_model": "qwen3:8b",
+    "prompt_version": "prompt_v0.2.1",
+    "aws_policy": "Retrieval v0.4",
+    "databricks_reference": "Track A"
+  },
+  "agreement": {
+    "query_count": 50,
+    "same_top5_order": 50,
+    "same_answer_text": 50
+  },
+  "retrieval": {
+    "comparative_metrics": {
+      "recall_at_1": {
+        "aws": 0.73,
+        "databricks": 0.73,
+        "delta": 0.0
+      },
+      "hit_at_1": {
+        "aws": 0.78,
+        "databricks": 0.78,
+        "delta": 0.0
+      },
+      "acceptable_hit_at_1": {
+        "aws": 0.86,
+        "databricks": 0.86,
+        "delta": 0.0
+      },
+      "recall_at_3": {
+        "aws": 0.92,
+        "databricks": 0.92,
+        "delta": 0.0
+      },
+      "hit_at_3": {
+        "aws": 0.94,
+        "databricks": 0.94,
+        "delta": 0.0
+      },
+      "acceptable_hit_at_3": {
+        "aws": 0.94,
+        "databricks": 0.94,
+        "delta": 0.0
+      },
+      "recall_at_5": {
+        "aws": 0.98,
+        "databricks": 0.98,
+        "delta": 0.0
+      },
+      "hit_at_5": {
+        "aws": 0.98,
+        "databricks": 0.98,
+        "delta": 0.0
+      },
+      "acceptable_hit_at_5": {
+        "aws": 0.98,
+        "databricks": 0.98,
+        "delta": 0.0
+      },
+      "mrr": {
+        "aws": 0.8556666666666666,
+        "databricks": 0.8556666666666666,
+        "delta": 0.0
+      },
+      "acceptable_mrr": {
+        "aws": 0.9023333333333333,
+        "databricks": 0.9023333333333333,
+        "delta": 0.0
+      }
+    },
+    "aws_route_counts": {
+      "dense": 41,
+      "identifier_hybrid": 9
+    },
+    "aws_reranked_cases": 37,
+    "aws_coverage": {
+      "applied_cases": 1,
+      "complete_cases": 1,
+      "injected_cases": 1
+    },
+    "aws_latency_ms": {
+      "aws_retrieval_total": {
+        "mean": 40.300399999999996,
+        "median": 41.519999999999996
+      },
+      "aws_cli_invoke_wall": {
+        "mean": 999.2656,
+        "median": 990.5699999999999
+      },
+      "local_query_embedding": {
+        "mean": 79.493,
+        "median": 51.79
+      }
+    },
+    "latency_note": "AWS retrieval timing is in-handler search/policy only. CLI wall time also includes process launch, network and any initialization. Neither is a direct comparison to Databricks server ANN time."
+  },
+  "generation": {
+    "comparative_metrics": {
+      "citation_label_valid_rate": {
+        "aws": 1.0,
+        "databricks": 1.0,
+        "delta": 0.0
+      },
+      "historical_scope_violation_rate": {
+        "aws": 0.0,
+        "databricks": 0.0,
+        "delta": 0.0
+      },
+      "current_superseded_citation_rate": {
+        "aws": 0.0,
+        "databricks": 0.0,
+        "delta": 0.0
+      },
+      "manual_review_rate": {
+        "aws": 0.2,
+        "databricks": 0.2,
+        "delta": 0.0
+      },
+      "avg_correctness_similarity": {
+        "aws": 0.7425280000000001,
+        "databricks": 0.7425280000000001,
+        "delta": 0.0
+      },
+      "avg_groundedness_similarity": {
+        "aws": 0.770248,
+        "databricks": 0.770248,
+        "delta": 0.0
+      },
+      "avg_citation_semantic_support": {
+        "aws": 0.74832,
+        "databricks": 0.74832,
+        "delta": 0.0
+      }
+    },
+    "historical_case_counts": {
+      "aws": 9,
+      "databricks": 9
+    },
+    "current_case_counts": {
+      "aws": 19,
+      "databricks": 19
+    }
+  },
+  "limitations": [
+    "The evaluation compares a fixed question set against a saved Databricks baseline. It does not establish general parity or accuracy.",
+    "Citation-label validity checks that references exist. Review flags and semantic similarity are screening signals, not correctness judgments.",
+    "Raw questions, chunks, ranked IDs, and answer text are excluded from this public summary."
+  ],
+  "cases": [
+    {
+      "query_id": "FULL-ENEN-001",
+      "language_direction": "en_to_en",
+      "category": "release_current_state",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": true,
+        "databricks": true
+      },
+      "historical_question": false,
+      "current_intent": true,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-ENEN-002",
+      "language_direction": "en_to_en",
+      "category": "decision_tracking",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-ENEN-003",
+      "language_direction": "en_to_en",
+      "category": "ownership",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-ENEN-004",
+      "language_direction": "en_to_en",
+      "category": "network_dependency",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": true,
+        "databricks": true
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-ENEN-005",
+      "language_direction": "en_to_en",
+      "category": "architecture_decision",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": true,
+        "databricks": true
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-ENEN-006",
+      "language_direction": "en_to_en",
+      "category": "data_residency",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-ENEN-007",
+      "language_direction": "en_to_en",
+      "category": "data_residency",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": true,
+        "databricks": true
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-ENEN-008",
+      "language_direction": "en_to_en",
+      "category": "change_request",
+      "aws_route": "identifier_hybrid",
+      "databricks_route": "identifier_hybrid",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-ENEN-009",
+      "language_direction": "en_to_en",
+      "category": "issue_current_state",
+      "aws_route": "identifier_hybrid",
+      "databricks_route": "identifier_hybrid",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": true,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-ENEN-010",
+      "language_direction": "en_to_en",
+      "category": "risk_dependency",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": true,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-KRKR-001",
+      "language_direction": "ko_to_ko",
+      "category": "decision_tracking",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-KRKR-002",
+      "language_direction": "ko_to_ko",
+      "category": "decision_status",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": true,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-KRKR-003",
+      "language_direction": "ko_to_ko",
+      "category": "scope",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": true,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-KRKR-004",
+      "language_direction": "ko_to_ko",
+      "category": "scope",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": true,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-KRKR-005",
+      "language_direction": "ko_to_ko",
+      "category": "network_dependency",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": true,
+      "current_intent": true,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-KRKR-006",
+      "language_direction": "ko_to_ko",
+      "category": "ownership",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-KRKR-007",
+      "language_direction": "ko_to_ko",
+      "category": "current_state",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": true,
+      "current_intent": true,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-KRKR-008",
+      "language_direction": "ko_to_ko",
+      "category": "current_state",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": true,
+      "current_intent": true,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-KRKR-009",
+      "language_direction": "ko_to_ko",
+      "category": "action_tracking",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": true,
+        "databricks": true
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-KRKR-010",
+      "language_direction": "ko_to_ko",
+      "category": "schedule_risk",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": true,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-KREN-001",
+      "language_direction": "ko_to_en",
+      "category": "release_current_state",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": true,
+        "databricks": true
+      },
+      "historical_question": false,
+      "current_intent": true,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-KREN-002",
+      "language_direction": "ko_to_en",
+      "category": "architecture_decision",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": true,
+        "databricks": true
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-KREN-003",
+      "language_direction": "ko_to_en",
+      "category": "data_residency",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-KREN-004",
+      "language_direction": "ko_to_en",
+      "category": "data_residency",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-KREN-005",
+      "language_direction": "ko_to_en",
+      "category": "ownership",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-KREN-006",
+      "language_direction": "ko_to_en",
+      "category": "exact_identifier",
+      "aws_route": "identifier_hybrid",
+      "databricks_route": "identifier_hybrid",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": true,
+        "databricks": true
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-KREN-007",
+      "language_direction": "ko_to_en",
+      "category": "change_request",
+      "aws_route": "identifier_hybrid",
+      "databricks_route": "identifier_hybrid",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-KREN-008",
+      "language_direction": "ko_to_en",
+      "category": "issue_impact",
+      "aws_route": "identifier_hybrid",
+      "databricks_route": "identifier_hybrid",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": true,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-KREN-009",
+      "language_direction": "ko_to_en",
+      "category": "release_readiness",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": true,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-KREN-010",
+      "language_direction": "ko_to_en",
+      "category": "risk_dependency",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": true,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-ENKR-001",
+      "language_direction": "en_to_ko",
+      "category": "decision_tracking",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-ENKR-002",
+      "language_direction": "en_to_ko",
+      "category": "decision_tracking",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-ENKR-003",
+      "language_direction": "en_to_ko",
+      "category": "decision_status",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": true,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-ENKR-004",
+      "language_direction": "en_to_ko",
+      "category": "network_dependency",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": true,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-ENKR-005",
+      "language_direction": "en_to_ko",
+      "category": "ownership",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": true,
+        "databricks": true
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-ENKR-006",
+      "language_direction": "en_to_ko",
+      "category": "current_state",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": true,
+      "current_intent": true,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-ENKR-007",
+      "language_direction": "en_to_ko",
+      "category": "schedule_risk",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-ENKR-008",
+      "language_direction": "en_to_ko",
+      "category": "scope",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": true,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-ENKR-009",
+      "language_direction": "en_to_ko",
+      "category": "scope",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": true,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-ENKR-010",
+      "language_direction": "en_to_ko",
+      "category": "action_tracking",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-CHAL-001",
+      "language_direction": "en_to_en",
+      "category": "exact_identifier",
+      "aws_route": "identifier_hybrid",
+      "databricks_route": "identifier_hybrid",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": true,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-CHAL-002",
+      "language_direction": "ko_to_en",
+      "category": "exact_identifier",
+      "aws_route": "identifier_hybrid",
+      "databricks_route": "identifier_hybrid",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": true,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-CHAL-003",
+      "language_direction": "en_to_en",
+      "category": "exact_identifier",
+      "aws_route": "identifier_hybrid",
+      "databricks_route": "identifier_hybrid",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": true,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-CHAL-004",
+      "language_direction": "ko_to_en",
+      "category": "temporal_conflict",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": true,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-CHAL-005",
+      "language_direction": "en_to_ko",
+      "category": "temporal_conflict",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-CHAL-006",
+      "language_direction": "ko_to_en",
+      "category": "temporal_conflict",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": true,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-CHAL-007",
+      "language_direction": "en_to_en",
+      "category": "ownership_boundary",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 0.0,
+        "databricks": 0.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-CHAL-008",
+      "language_direction": "ko_to_ko",
+      "category": "scope_boundary",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-CHAL-009",
+      "language_direction": "en_to_en",
+      "category": "risk_dependency",
+      "aws_route": "dense",
+      "databricks_route": "dense",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": false,
+        "databricks": false
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    },
+    {
+      "query_id": "FULL-CHAL-010",
+      "language_direction": "ko_to_en",
+      "category": "metadata_misattribution",
+      "aws_route": "identifier_hybrid",
+      "databricks_route": "identifier_hybrid",
+      "top5_order_exact_match": true,
+      "answer_text_exact_match": true,
+      "recall_at_5": {
+        "aws": 1.0,
+        "databricks": 1.0
+      },
+      "citation_labels_valid": {
+        "aws": true,
+        "databricks": true
+      },
+      "manual_review_flag": {
+        "aws": true,
+        "databricks": true
+      },
+      "historical_question": false,
+      "current_intent": false,
+      "cited_after_reference_date": {
+        "aws": false,
+        "databricks": false
+      },
+      "current_query_cited_superseded": {
+        "aws": false,
+        "databricks": false
+      }
+    }
+  ]
+}
